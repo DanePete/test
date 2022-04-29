@@ -774,6 +774,8 @@ $dbName=getenv("DB_NAME");
 $dbUser=getenv("DB_USER");
 $dbPass=getenv("DB_PASS");
 $host=getenv("DB_HOST");
+$port=getenv("DB_PORT");
+// $prefix=getenv("DB_PREFIX");
 
 //apply those variables
 $databases['default']['default'] = array (
@@ -782,7 +784,7 @@ $databases['default']['default'] = array (
   'password' => $dbPass,
   'prefix' => '',
   'host' => $host,
-  'port' => '',
+  'port' => $port,
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
