@@ -779,12 +779,12 @@ $port=getenv("DB_PORT");
 
 //apply those variables
 $databases['default']['default'] = array (
-  'database' => $dbName,
-  'username' => $dbUser,
-  'password' => $dbPass,
+  'database' => 'db',
+  'username' => 'db',
+  'password' => 'AVNS_4R6cDdO0s39i7cw',
   'prefix' => '',
-  'host' => $host,
-  'port' => $port,
+  'host' => 'app-253cc405-189e-487f-bf9a-6b3d85c0ecf1-do-user-4678454-0.b.db.ondigitalocean.com',
+  'port' => '25060',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
