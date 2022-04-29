@@ -769,14 +769,22 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+
+$dbName=getenv("DB_NAME");
+$dbUser=getenv("DB_USER");
+$dbPass=getenv("DB_PASS");
+$host=getenv("DB_HOST");
+
+//apply those variables
 $databases['default']['default'] = array (
-  'database' => 'drupal9',
-  'username' => 'drupal9',
-  'password' => 'drupal9',
+  'database' => $dbName,
+  'username' => $dbUser,
+  'password' => $dbPass,
   'prefix' => '',
-  'host' => 'database',
+  'host' => $host,
   'port' => '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+
 $settings['config_sync_directory'] = 'sites/default/files/config_t4XKtOi7yrKl8ACV_zhZhEbIaw2GZ0JkaO5koumlhSe93r8CNFvjS9cDHHRO0SqiRKShL3yFNA/sync';
